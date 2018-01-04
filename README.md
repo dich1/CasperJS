@@ -20,7 +20,7 @@ brew doctor
 brew install phantomjs casperjs slimerjs
 ```
 
-- Firefox 52.0ダウンロード、展開
+- Firefox 52.0ダウンロード、展開  
 https://download.mozilla.org/?product=firefox-52.0&os=osx&lang=ja-JP-mac
 
 - パスの設定
@@ -63,8 +63,8 @@ casperjs --engine=slimerjs trInput.js // ファイルを配置したパスを指
 - 複数PJ未対応
 
 ## 参考URL
-https://gigazine.net/news/20170308-firefox-52/
-http://itsukara.hateblo.jp/entry/2016/04/09/233805
-https://docs.slimerjs.org/current/installation.html
-https://stackoverflow.com/questions/36040830/casperjs-why-does-my-url-change-to-aboutblank-when-my-page-is-loaded
+https://gigazine.net/news/20170308-firefox-52/  
+http://itsukara.hateblo.jp/entry/2016/04/09/233805  
+https://docs.slimerjs.org/current/installation.html  
+https://stackoverflow.com/questions/36040830/  casperjs-why-does-my-url-change-to-aboutblank-when-my-page-is-loaded  
 http://kimagureneet.hatenablog.com/?page=1490109108
