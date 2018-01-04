@@ -1,7 +1,7 @@
 var settings = {
 	startTime   : '09:00', // 始業時間
 	emailAddress: '***.***@ever-rise.co.jp',
-	password    : '********'
+	password    : '****'
 };
 
 var time = new Date();
