@@ -103,6 +103,8 @@ casper.then(function() {
 
 /** 
  * 勤怠入力
+ *
+ * @param {Object} workingHours 勤務時間
  */
 casper.then(function() {
 	this.evaluate(function(workingHours) {
