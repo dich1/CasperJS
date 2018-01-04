@@ -20,13 +20,23 @@ brew doctor
 brew install phantomjs casperjs slimerjs
 ```
 
-- 各々パスの設定
-
-- Firefox 52.0ダウンロード
+- Firefox 52.0ダウンロード、展開
 https://download.mozilla.org/?product=firefox-52.0&os=osx&lang=ja-JP-mac
+
+- パスの設定
+```
+vim ~/.bash_profile
+
+///// 以下を追加
+export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
+/////
+
+source ~/.bash_profile
+```
 
 - 確認
 ```
+/Applications/Firefox.app/Contents/MacOS/firefox-bin -v
 phantomjs --version
 casperjs --version
 slimerjs --version
@@ -37,19 +47,24 @@ slimerjs --version
 - 設定情報を入力する
 ```
 var settings = {
-	startTime   : '09:00', // 始業時間
-	emailAddress: '***.***@ever-rise.co.jp',
-	password    : '****'
+	emailAddress : '***.***@ever-rise.co.jp',
+	password     : '****',
+	startTime    : '09:00', // 始業時間
+	projectNumber: '7' // PJ選択の上から何番目か指定(ex:本社行事 -> '1')
 };
 ```
 
 - コマンドを実行する
 casperjs --engine=slimerjs trInput.js // ファイルを配置したパスを指定
 
-## 問題
+## 現状
 - GUI起動しないと上手くいかない
 - SlimerJSがFirefoxの最新バージョンで使えない
+- 複数PJ未対応
 
 ## 参考URL
 https://gigazine.net/news/20170308-firefox-52/
+http://itsukara.hateblo.jp/entry/2016/04/09/233805
+https://docs.slimerjs.org/current/installation.html
+https://stackoverflow.com/questions/36040830/casperjs-why-does-my-url-change-to-aboutblank-when-my-page-is-loaded
 http://kimagureneet.hatenablog.com/?page=1490109108
